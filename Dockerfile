@@ -10,7 +10,7 @@ ARG jenkins_home=/var/jenkins_home
 
 # Create Jenkins user
 RUN groupadd -g ${gid} ${group}; \
-    useradd -d ${jenkins_home} -u ${uid} -g ${gid} -m -s /bin/bash ${user}; \
+    useradd -d ${jenkins_home} -u ${uid} -g ${gid} -m -s /bin/nologin ${user}; \
     chown ${uid}:${gid} /var/jenkins_home
 ENV JENKINS_HOME ${jenkins_home}
 
