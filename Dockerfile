@@ -1,7 +1,5 @@
 FROM archlinux/base
 
-FROM archlinux/base
-
 ARG user=jenkins
 ARG group=jenkins
 ARG uid=1000
@@ -15,7 +13,7 @@ RUN groupadd -g ${gid} ${group}; \
 ENV JENKINS_HOME ${jenkins_home}
 
 # Jenkins dependancies
-RUN pacman -Sy docker docker-composejava-runtime-common jre8-openjdk libfontenc \
+RUN pacman -Sy java-runtime-common jre8-openjdk libfontenc \
            libxmu  libxt nspr  nss  ttf-dejavu  xdg-utils jre8-openjdk-headless \
            xorg-fonts-encodings  xorg-mkfontscale  xorg-xset --noconfirm
 # Additional programs
