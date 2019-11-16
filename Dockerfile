@@ -3,7 +3,7 @@ FROM philipwold/arch-tini
 ARG user=jenkins
 ARG group=jenkins
 ARG uid=1000
-ARG gid=976
+ARG gid=1000
 ARG jenkins_home=/var/jenkins_home
 
 # Create Jenkins user
@@ -30,4 +30,4 @@ USER ${user}
 CMD java -jar /usr/share/jenkins/jenkins.war --httpPort=8090
 
 EXPOSE 8090/tcp
-VOLUME [ ${jenkins_home}} ]
+VOLUME [ ${jenkins_home} ]
