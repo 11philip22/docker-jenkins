@@ -1,4 +1,4 @@
-FROM archlinux/base
+FROM philipwold/arch-tini
 
 ARG user=jenkins
 ARG group=jenkins
