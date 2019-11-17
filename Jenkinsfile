@@ -16,8 +16,4 @@ node ("master") {
             image.push()
         }
     }
-
-    // stage ("trigger dependant builds") {
-    //     build job: "docker-build-jenkins_dind"
-    // }
 }
