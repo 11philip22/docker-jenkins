@@ -17,7 +17,7 @@ node ("master") {
         }
     }
 
-    stage ("trigger dependant builds") {
-        build job: "docker-build-jenkins_dind"
-    }
+    // stage ("trigger dependant builds") {
+    //     build job: "docker-build-jenkins_dind"
+    // }
 }
