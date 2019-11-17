@@ -1,6 +1,6 @@
 FROM philipwold/arch-tini
 
-ARG user=user
+ARG user=jenkins
 ARG group=jenkins
 ARG uid=1000
 ARG gid=1000
